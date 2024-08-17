@@ -1,0 +1,51 @@
+.livePads__items {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.25rem;
+
+  @media (max-width: 1050px) {
+    gap: 0.625rem;
+  }
+  
+  .livePads__item {
+    aspect-ratio: 1;
+    border-radius: 1.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .livePads__addItem {
+    aspect-ratio: 1;
+    border-radius: 1rem;
+    border: 0.125rem dashed #FFF;
+    background: rgba(56, 54, 76, 0.50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+      width: 4.5rem;
+      height: 4.5rem;
+      fill: white;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .livePads__items {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1150px) {
+  .livePads__items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .livePads__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

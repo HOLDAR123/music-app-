@@ -1,0 +1,99 @@
+.project {
+  aspect-ratio: 1;
+  display: flex;
+  border-radius: 1rem;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  .deleteButton {
+    position: absolute;
+    top: 0.625rem;
+    right: 0.625rem;
+    transition: 0.5s ease-in-out;
+    color: white;
+    border: none;
+    padding: 0.3125rem 0.625rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &:hover .deleteButton {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .imageWrapper {
+    position: relative;
+    transition: filter 0.3s ease-in-out;
+
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: filter 0.3s ease-in-out;
+    }
+
+    .absolute {
+      position: absolute;
+      top: 0;
+      color: transparent;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .project__categories {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+
+    @media (max-width: 800px) {
+      gap: 0.3125rem;
+    }
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .project__category {
+      @media (max-width: 800px) {
+        width: 0.9375rem;
+        height: 5.625rem;
+      }
+
+      @media (max-width: 440px) {
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .project .project__categories .project__category {
+    width: 0.9375rem;
+    height: 5.625rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .project .project__categories .project__category {
+    width: 0.625rem;
+    height: 5rem;
+  }
+}
+
+.imageWrapper:hover .image {
+  filter: blur(0.625rem);
+  transition: filter 0.3s ease-in-out;
+}
+
+.hovered {
+  filter: blur(0.625rem);
+  transition: filter 0.3s ease-in-out;
+}

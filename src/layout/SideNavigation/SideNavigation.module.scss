@@ -1,0 +1,130 @@
+@import "~/src/styles/mixins";
+
+.sideNavigation {
+  z-index: 1;
+  background: #15151C;
+  width: 8.25rem;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 550px) {
+    display: none;
+  }
+
+  .logoWrapper {
+    position: fixed;
+    width: 3.125rem;
+    height: 1.9375rem;
+    align-self: center;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .navigation {
+    padding: 6rem 0 2.5rem 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    .sideNavigation {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1.875rem;
+    }
+  }
+}
+
+.linkItem {
+  position: relative;
+  z-index: 100;
+  padding: 0.5rem 0.3rem;
+}
+
+.linkContentProfile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+
+  .avatarIcon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .profileTitle {
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.60);
+  }
+}
+
+.linkContentSettings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  .settingsIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.linkContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.title {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.activeLink {
+  width: calc(100% + 1px);
+  height: calc(100% + 1px);
+  border-radius: 0.9375rem;
+  background: linear-gradient(38deg, rgba(10, 209, 206, 0.80) 0%, rgba(20, 193, 86, 0.80) 100%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    left: 1px;
+    right: 1px;
+    z-index: -1;
+    border-radius: 0.9375rem;
+    background-color: var(--darker);
+  }
+}

@@ -1,0 +1,51 @@
+.livePadsContent {
+    .livePads__possibilities {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3.125rem;
+      @media (max-width: 550px) {
+        gap: 1.25rem;
+        flex-direction: column;
+        margin-bottom: 1.25rem;
+      }
+      .livePads__title {
+        font-weight: 500;
+        font-size: 1.875rem;
+  
+        @media only screen and (max-width: 1200px) {
+            font-size: 1.5rem;
+        }
+  
+        @media only screen and (min-width: 1200px) and (max-width: 1500px) {
+            font-size: 1.6875rem;
+        }
+      }
+      .livePads__settings {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.875rem;
+        @media (max-width: 1024px) {
+          gap: 1.25rem;
+        }
+        @media (max-width: 768px) {
+          gap: 0.625rem;
+        }
+      }
+    }
+  }
+  
+  .iconSetting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+  }
+  
+  .separation{
+    height: 1.25rem;
+    width: 0.0625rem;
+    background-color: #FFFFFF;
+  }
+  

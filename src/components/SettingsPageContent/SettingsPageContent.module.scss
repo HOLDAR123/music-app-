@@ -1,0 +1,83 @@
+.pageTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  @media (max-width: 550px) {
+    margin-left: 1.5rem;
+  }
+}
+
+.sectionTitle {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-top: 2.8rem;
+  margin-bottom: 0.65rem;
+
+  @media (max-width: 450px) {
+    font-size: 1.125rem;
+  }
+}
+
+.sections {
+  margin-top: 3rem;
+
+  .sectionContent {
+    gap: 2.5rem;
+    background-color: #252532;
+    border-radius: 0.75rem;
+
+    .sectionContentItem {
+      font-size: 1rem;
+      background-color: #252532;
+      border-radius: 0.75rem;
+      padding: 1.2rem 2rem;
+
+      @media (max-width: 550px) {
+        padding: 1rem;
+      }
+
+      @media (max-width: 900px) {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .linkButton {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 1rem;
+    color: #ffffff;
+    padding: 0.3125rem 0;
+
+    @media (max-width: 900px) {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.link {
+  width: 100%;
+}
+
+a {
+  color: #ffffff;
+}
+
+.iconSettingWithoutSpaceBetween {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.0625rem;
+
+  @media (max-width: 450px) {
+    gap: 1rem;
+  }
+}
+
+.iconSetting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,17 @@
+.mobileMenuButton {
+    backdrop-filter: inherit;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    top: 1rem;
+    background: #15151C;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    padding: 0.25rem;
+    transition: all 0.3s ease-in-out;
+    z-index: 99999999;
+  
+    @media (min-width: 550px) {
+      display: none;
+    }
+}

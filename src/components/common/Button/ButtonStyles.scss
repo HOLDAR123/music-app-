@@ -1,0 +1,83 @@
+.button {
+  position: relative;
+  z-index: 1; 
+  border-radius: 0.75rem;
+  overflow: hidden;
+  user-select: none;
+  background: linear-gradient(95deg, #0eafad 0%, #12c575 100%);
+  transition: all 0.2s ease-in-out; 
+}
+
+.buttonFilled {
+  background: #252532;
+  transition: all 0.2s ease-in-out; 
+  
+  &:hover {
+    z-index: 1;
+    background: #353547;
+  }
+}
+
+.buttonOutlined {
+  position: relative;
+  transition: all 0.2s ease-in-out; 
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    left: 1px;
+    right: 1px;
+    background: #1a1a23;
+    border-radius: 0.7rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover {
+    &::before {
+      background: linear-gradient(95deg, #0eafad 0%, #12c575 100%);
+      z-index: -1; 
+    }
+  }
+}
+
+.buttonLabel {
+  color: #ffffff;
+  position: relative;
+  z-index: 3;
+  font-size: 0.95rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  white-space: nowrap;
+  transition: all 0.2s ease-in-out; 
+
+  @media(max-width: 900px) {
+    font-size: 0.8rem;
+  }
+
+  @media(max-width: 600px) {
+    font-size: 0.7rem;
+    padding: 0.6rem 0.8rem;
+  }
+}
+
+.buttonFilledColored {
+  background: linear-gradient(95deg, #0eafad 0%, #12c575 100%);
+  transition: all 0.2s ease-in-out; 
+}
+
+.link {
+  z-index: 4;
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: all 0.2s ease-in-out; 
+}
